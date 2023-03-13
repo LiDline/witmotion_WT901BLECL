@@ -1,0 +1,31 @@
+.App-Header {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  text-align: center;
+  font-family: sans-serif;
+  font-weight: 400;
+}
+
+.App-Pages {
+  margin-top: 15px;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.App-Button {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.App-Hor-Line {
+  border-bottom: thin lightblue solid;
+}
+
+.Other {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+}

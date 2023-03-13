@@ -1,54 +1,46 @@
-# WITMOTION WT901BLECL
-Здесь представлено небольшое web-приложение для использования датчика WT901BLECL (через USB и bluetooth) средствами Python.
-Вся информация о датчике находится [тут](https://github.com/WITMOTION/WT901BLECL). Помимо этой документации, советую посмотреть документацию на используемый в датчике сенсор [WT901](https://images-na.ssl-images-amazon.com/images/I/B11fVGszLsS.pdf).
+# Getting Started with Create React App
 
-## 1 Состав проекта
-...
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## 2 Запуск программы
-Запуск программы осуществляется в 'app.py' и 'output.py'. Приложение будет доступно в браузере по ссылке: http://127.0.0.1:8050/.
+## Available Scripts
 
-## 3 Используемые библиотеки
-Используемые библиотеки:
-- asyncio;
-- pybluez;
-- serial;
-- plotly;
-- datetime;
-- numpy;
-- dash;
-- dash_extensions;
-- dash_bootstrap_components;
-- pandas.
-____
-Все используемые библиотеки указаны в файле requirements.txt. Для быстрой установки отсутствующих библиотек в терминале выполните: 
-```
-pip install -r requirements.txt
-```
-## 4 Замечания
+In the project directory, you can run:
 
-### 4.1 Для запуска на Ubuntu через USB:
-Перед запуском скрипта в блокноте узнайте куда подключается датчик: 
-```
-sudo dmesg -wH
-```
-Затем пропишите: 
-```
-sudo chmod a+rw /dev/ttyUSB0
-```
-где /dev/ttyUSB0 - результат предыдущей команды. При переподключении датчика придётся вводить эту команду каждый раз. Если Вам это не нужно, введите следующую строку.
-```
- sudo usermod -a -G dialout $USER 
-```
+### `npm start`
 
-### 4.2 Документация
-Если Вам необходимо изменить конфигурацию датчика, то советую сразу смотреть на документацию встроенного сенсора [WT901](https://images-na.ssl-images-amazon.com/images/I/B11fVGszLsS.pdf). В "родной" документации много чего не хватает.
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-### 4.3 Калибровка датчика
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
 
-1. Калибровка акселерометра и гироскопа происходит в течение 3-х секунд после отправки команды (никаких сложностей, просто не трогайте его).
-2. Калбировка магнитрометра представляет из себя вращение датчика вокруг своих осей по 3 раза (см. [видео](https://youtu.be/smi2uePvC-Q?t=104))
+### `npm test`
 
-### 4.4 Сложности
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-У данного датчика (по умолчанию) позиционирование просиходит путём считывания данных с 9-ти степеней (по осям XYZ: 3 акселерометра, 3 гироскопа, 3 магнитометра). До калибровки магнитометра угол oZ всегда давал одно значение. После калибровки угол oZ работает адекватно ДО ЛЮБОГО резкого линейного толчка (~ 1g) датчика. Брак это или нет, мне не известно. Настоятельно советую забыть про магнитометр и СРАЗУ переключать датчик на 6 степеней.
+### `npm run build`
+
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
+
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### `npm run eject`
+
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
